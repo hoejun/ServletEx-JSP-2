@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 
+ 1. <input name="" 각각에 값을 하나씩 전달하면,
+  ServletTest3서블릿에서 getParmeter()메소드로 받음
+-->
+	  
+<form action="/ServletEx/.bo" method="get">
+이름 : <input type="text" id="irum" name="irum"/> <br/>
+주소 : <input type="text" name="addr"/>
+<input type="submit" value="전송"/>
+</form>
+
+<hr>
+ 
+<!-- 
+ 2. <input name=""에 하나의 var라는 이름으로 여러개의 값 서블릿에 전달하면,
+  ServletTest3서블릿에서는 getParameterValues()메소드 호출하여 여러개의 많은값을 배열로 받음.
+-->
+ 
+<form action="/ServletEx/.bo" method="get">
+이름 : <input type="text" id="irum" name="var"/> <br/>
+주소 : <input type="text" name="var"/>
+<input type="submit" value="전송"/> 
+</form> 
+ 
+ <!-- 
+ (설명)
+ 웹브라우저 http://localhost:8080/ServletEx/getTest.html 파일을 통해 톰캣서버의 서블릿객체로 전송한다.
+ <form action="/ServletEx/.bo"> 라는 말은??
+ web.xml에 설정한 서블릿 가상주소를 통해 ServletTest3 서블릿에 요청한다는 뜻.
+  -->
+</body>
+</html>

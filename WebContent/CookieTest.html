@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+스토리
+이름, 주소를 웹어플리케이션 서버의 서블릿에게 요청하는데,
+이때 이름, 주소를 쿠키라는 객체를 생성하여 저장하게 됩니다.
+각각의 이름 쿠키, 주소쿠키 객체에 저장된 값을 현재 html로 응답받기 위해,
+response객체에 저장하여 응답 합니다.
+ -->
+ 
+ <!-- 클라이언트1의 첫번째 요청 정보 -->
+ <form action="cookie.do" method="get">
+ 	이름 : <input type="text" name="name"/><p/>
+ 	주소 : <input type="text" name="addr"/><p/>
+ 		   <input type="submit" value="쿠키에 저장"/>
+ </form>
+ 
+ <!-- 클라이언트1의 첫번째 요청을 한뒤 웹서버에 저장한 쿠키정보를 확인하기 위한 두번째 요청 -->
+ <form action="cookie.do" method="POST">
+ 	<input type="submit" value="저장된 쿠키 확인"/>
+ </form>
+ 
+</body>
+</html>
